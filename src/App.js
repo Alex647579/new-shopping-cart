@@ -1,25 +1,18 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import productsJson from "./static/data/products.json"
+import Product from "./Components/Product";
 
 class App extends Component {
   render() {
+    let productsData = productsJson['products'];
+
+    let productsList = Object.entries(productsData).map((element) => (
+      <Product data={element[1]}></Product>
+    ));
+
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div>
+        {productsList}
       </div>
     );
   }
