@@ -30,3 +30,40 @@
     transform: rotate(360deg);
   }
 }
+
+/*
+  App.js
+*/
+
+.catalog {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+/*
+  Product.js
+*/
+
+.productWrapper {
+  width: 200px;
+  height: 240px;
+  border: lightblue 1px solid;
+  margin: 1px;
+  text-align: center;
+}
+
+.productImage {
+  width: 50%;
+  height: auto;
+  padding-top: 20px;
+}
+
+.productName {
+  font-size: 12px;
+  font-family: Helvetica;
+}
+
+.productPrice {
+  font-size: 12px;
+  font-family: Helvetica;
+}
